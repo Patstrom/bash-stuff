@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z $1 ]
+    then 
+        echo "Missing argument"
+    else
+        sudo systemctl start openvpn-client@$1
+fi

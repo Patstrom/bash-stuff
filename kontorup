@@ -7,6 +7,6 @@ xrandr --output DP-1 --left-of HDMI-2 &&
 
 # move workspaces
 i3-msg [workspace=3] move workspace to output DP-1 &&
-i3-msg [workspace=4] move workspace 4 to output HDMI-2 &&
+i3-msg [workspace=4] move workspace to output HDMI-2 &&
 
 echo setup complete

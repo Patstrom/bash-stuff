@@ -1,6 +1,11 @@
 #!/bin/bash
 
+# Kill 5 layers
+i3-msg [workspace=3] kill &&
+i3-msg [workspace=4] kill &&
 
+# Kill outputs
 xrandr --output DP-1 --off &&
 xrandr --output HDMI-2 --off &&
+
 echo cleanup complete

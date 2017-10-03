@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Remove containers
-docker rm $(docker ps -aq)
+# Remove exited containers
+docker rm $(docker ps -f"status=exited" -aq)
 
 # Remove dangling images
 docker rmi $(docker images -f"dangling=true" -q)

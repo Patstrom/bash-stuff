@@ -2,8 +2,8 @@
 
 ps -eo rss,%mem,pid,euser,args:100 --sort %mem \
     | {
-        echo -n "  " &&
         head -1 ; \
         grep -v grep | grep -i $@ \
         | awk '{printf "%.2fMB ", $1/1024; $1=""; printf $2 "%%"; $2=""; print}'
-    }
+    } \
+    | column -t

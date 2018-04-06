@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # monitors
-xrandr --output DP-1 --mode 1920x1200 --rotate left --left-of eDP-1 &&
-xrandr --output HDMI-2 --mode 1920x1200 --above eDP-1 &&
-xrandr --output DP-1 --left-of HDMI-2 &&
+xrandr --output HDMI-2 --mode 1920x1200 --rotate left --left-of eDP-1 &&
+xrandr --output DP-1 --mode 1920x1200 --above eDP-1 &&
+xrandr --output HDMI-2 --left-of DP-1 &&
 
 # move workspaces
 i3-msg [workspace=3] move workspace to output DP-1 &&
